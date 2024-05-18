@@ -3,19 +3,21 @@
 import { personalData } from "@/utils/data/personal-data";
 import BlogCard from "../components/homepage/blog/blog-card";
 
-async function getBlogs() {
-  // const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
+async function getData() {
+  const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@panchalparthppp`)
+    .then((response) => response.json());
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
+  if (!res.items) {
+    throw new Error('Items not found in response');
   }
 
-  const data = await res.json();
-  return data;
+  const filtered = res.items.filter((item) => item);
+
+  return filtered;
 };
 
 async function page() {
-  const blogs = await getBlogs();
+  const blogs = await getData();
 
   return (
     <div className="py-8">
@@ -30,12 +32,12 @@ async function page() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
-        {
+        {/* {
           blogs.map((blog, i) => (
-            blog?.cover_image &&
-            <BlogCard blog={blog} key={i} />
-          ))
-        }
+            blog?.cover_image && */}
+            <BlogCard blog={blogs} />
+          {/* )) */}
+        {/* } */}
       </div>
     </div>
   );

@@ -14,7 +14,6 @@ const extractImageUrl = (htmlContent) => {
   const doc = parser.parseFromString(htmlContent, 'text/html');
   const figure = doc.querySelector('figure img');
 
-  console.log("figure", figure?.src)
   return figure ? figure.src : null;
 };
 
@@ -24,21 +23,18 @@ function BlogCard({ blog }) {
 
   useEffect(() => {
     if (blog[0].description.htmlContent) {
-      console.log("Hello")
       const extractedUrl = extractImageUrl(blog.htmlContent);
       setImageUrl(extractedUrl);
     }
   }, [blog]);
 
-  console.log("Blog Image: ", imageUrl)
-
-  const extractDate = (datetime) => {
-    return datetime.split(' ')[0];
-  };
+  // const extractDate = (datetime) => {
+  //   return datetime.split(' ')[0];
+  // };
   
-  // Example usage
-  const datetimeString = blog[0]?.pubDate;
-  const date = extractDate(datetimeString);
+  // // Example usage
+  // const datetimeString = blog[0]?.pubDate;
+  // const date = extractDate(datetimeString);
 
   return (
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group"
@@ -76,7 +72,7 @@ function BlogCard({ blog }) {
           </p>
         </Link>
         <p className='mb-2 text-sm text-[#16f2b3]'>
-          Published date: {date}
+          Published date: {blog[0]?.pubDate}
         </p>
         
         {/* <div className="">

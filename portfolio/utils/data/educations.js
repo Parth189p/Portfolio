@@ -1,20 +1,24 @@
+
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2019 - 2023 ",
-    institution: "Indus University",
+    title: "Machine Learning Engineering for Production (MLOps) Specialization",
+    duration: "January 29, 2024",
+    institution: "DeepLearning.AI",
+    link: "https://www.coursera.org/account/accomplishments/specialization/8M3PK2AMDJ95?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n" // Replace with your actual link
   },
   {
     id: 2,
-    title: "Higher Secondary ",
-    duration: "2017 - 2029",
-    institution: "Shree New Vidhya Vihar",
+    title: "Deep-Learning Specialization",
+    duration: "October 11, 2023",
+    institution: "DeepLearning.AI",
+    link:"https://www.coursera.org/account/accomplishments/specialization/5MHHS9DCT6W6?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
   },
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2007 - 2017",
-    institution: "Akshar School",
+    title: "IBM Data Science Professional course",
+    duration: "December 13, 2022",
+    institution: "IBM",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/JZQE5SYWVRJD?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" // Replace with your actual link
   }
 ]

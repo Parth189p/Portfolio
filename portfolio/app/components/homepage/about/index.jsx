@@ -29,7 +29,7 @@ function AboutSection() {
             height={280}
             alt=""
             className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-          />
+          />  
         </div>
       </div>
     </div>

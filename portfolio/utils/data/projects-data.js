@@ -1,7 +1,7 @@
-import ayla from '/public/image/ayla.jpg';
-import crefin from '/public/image/crefin.jpg';
-import realEstate from '/public/image/real-estate.jpg';
-import travel from '/public/image/travel.jpg';
+import ayla from '/home/parth/Desktop/d/Portfolio_website/portfolio/public/image/ayla.jpg';
+import crefin from '/home/parth/Desktop/d/Portfolio_website/portfolio/public/image/crefin.jpg';
+import realEstate from '/home/parth/Desktop/d/Portfolio_website/portfolio/public/image/real-estate.jpg';
+import travel from '/home/parth/Desktop/d/Portfolio_website/portfolio/public/image/travel.jpg';
 
 export const projectsData = [
     {
@@ -12,7 +12,7 @@ export const projectsData = [
         role: 'AI/Ml Engineer',
         code: '',
         demo: '',
-        image: crefin,
+        image : crefin,
         
     },
     {
@@ -33,7 +33,7 @@ export const projectsData = [
         code: '',
         role: 'Machine Learning Engineer',
         demo: '',
-        image: realEstate,
+        image : realEstate,
     },
     {
         id: 4,

@@ -1,18 +1,51 @@
+"use client"
+
 // @flow strict
 import { timeConverter } from '@/utils/time-converter';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
 import { BsHeartFill } from 'react-icons/bs';
 import { FaCommentAlt } from 'react-icons/fa';
 
+const extractImageUrl = (htmlContent) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlContent, 'text/html');
+  const figure = doc.querySelector('figure img');
+
+  console.log("figure", figure?.src)
+  return figure ? figure.src : null;
+};
+
 function BlogCard({ blog }) {
+
+  const [imageUrl, setImageUrl] = useState("");
+
+  useEffect(() => {
+    if (blog[0].description.htmlContent) {
+      console.log("Hello")
+      const extractedUrl = extractImageUrl(blog.htmlContent);
+      setImageUrl(extractedUrl);
+    }
+  }, [blog]);
+
+  console.log("Blog Image: ", imageUrl)
+
+  const extractDate = (datetime) => {
+    return datetime.split(' ')[0];
+  };
+  
+  // Example usage
+  const datetimeString = blog[0]?.pubDate;
+  const date = extractDate(datetimeString);
 
   return (
     <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group"
     >
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         <Image
-          src={blog?.cover_image}
+          src={imageUrl || "/Fine-tuning-stable-diffusion.png"} 
           height={1080}
           width={1920}
           alt=""
@@ -21,9 +54,8 @@ function BlogCard({ blog }) {
       </div>
       <div className="p-2 sm:p-3 flex flex-col">
         <div className="flex justify-between items-center text-[#16f2b3] text-sm">
-          <p>{timeConverter(blog.published_at)}</p>
           <div className="flex items-center gap-3">
-            <p className="flex items-center gap-1">
+            {/* <p className="flex items-center gap-1">
               <BsHeartFill />
               <span>{blog.public_reactions_count}</span>
             </p>
@@ -32,20 +64,21 @@ function BlogCard({ blog }) {
                 <FaCommentAlt />
                 <span>{blog.comments_count}</span>
               </p>
-            }
+            } */}
           </div>
         </div>
-        <Link target='_blank' href={blog.url}>
+        {/* <p className='text-sm lg:text-base text-[#d3d8e8] pb-3 lg:pb-6 line-clamp-3'>
+          {blog[0].author}
+        </p> */}
+        <Link target='_blank' href={blog[0].link}>
           <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
-            {blog.title}
+            {blog[0]?.title}
           </p>
         </Link>
         <p className='mb-2 text-sm text-[#16f2b3]'>
-          {`${blog.reading_time_minutes} Min Read`}
+          Published date: {date}
         </p>
-        <p className='text-sm lg:text-base text-[#d3d8e8] pb-3 lg:pb-6 line-clamp-3'>
-          {blog.description}
-        </p>
+        
         {/* <div className="">
           <Link target='_blank' href={blog.url}>
             <button className='bg-violet-500 text-white px-3 py-1.5 rounded-full text-xs'>

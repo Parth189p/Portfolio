@@ -1,14 +1,14 @@
 // @flow strict
 
 import * as React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 
 function ProjectCard({ project }) {
 
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full" >
-      <Image src={project.image} alt={project.name} width={200} height={100} />
+      {/* <Image src={project.image} alt={project.name} width={200} height={100} /> */}
         <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full" >
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>

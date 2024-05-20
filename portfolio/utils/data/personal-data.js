@@ -4,7 +4,7 @@ export const personalData = {
   designation: "Machine Learning Engineer",
   description: "I'm an enthusiastic and aspiring Machine Learning Engineer driven by a passion for uncovering patterns and forging insightful connections across various domains. As a dedicated learner, I actively stay abreast of the latest advancements in the AI & machine learning landscape, continuously expanding my knowledge and skill set. My interests lie in applying cutting-edge algorithms to address real-world business challenges effectively and innovatively. I am excited to contribute my expertise to impactful projects and collaborate with like-minded professionals to drive transformative solutions in the field of AI/Ml. I am available for any kind of job opportunity that suits my skills and interests.",
   email: 'panchalparthppp@gmail.com',
-  phone: '+919328697355',
+  phone: '+91 Oops ! Can\'t share my number',
   address: 'Ahmedabad, Gujarat, India ',
   github: 'https://github.com/Parth189p',
   // facebook: 'https://www.facebook.com/abusaid.riyaz/',

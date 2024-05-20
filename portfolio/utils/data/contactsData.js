@@ -1,6 +1,6 @@
 export const contactsData = {
     email: 'panchalparthppp@gmail.com',
-    phone: '+91 Oops ! Can\'t share my number',
+    phone: '+91 Oops ! Can\'t share my number publicly.',
     address: 'Ahmedabad, Gujarat, India ',
     github: 'https://github.com/Parth189p',
     // facebook: 'https://www.facebook.com/abusaid.riyaz/',

@@ -19,6 +19,7 @@ export const skillsData = [
   'Zenml',
   'ubuntu',
   'streamlit',
+  'Azure'
 
 ]
 

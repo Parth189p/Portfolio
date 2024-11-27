@@ -2,7 +2,7 @@ export const personalData = {
   name: "Parth Panchal",
   profile: '/profile.png',
   designation: "Machine Learning Engineer",
-  description: "I'm an enthusiastic and aspiring Machine Learning Engineer driven by a passion for uncovering patterns and forging insightful connections across various domains. As a dedicated learner, I actively stay abreast of the latest advancements in the AI & machine learning landscape, continuously expanding my knowledge and skill set. My interests lie in applying cutting-edge algorithms to address real-world business challenges effectively and innovatively. I am excited to contribute my expertise to impactful projects and collaborate with like-minded professionals to drive transformative solutions in the field of AI/Ml. I am available for any kind of job opportunity that suits my skills and interests.",
+  description: "I enjoy working in a role that offers diverse challenges, fosters innovation, and allows me to collaborate on cutting-edge AI/ML projects. I thrive in environments where I can continuously learn and contribute to impactful solutions.",
   email: 'panchalparthppp@gmail.com',
   phone: '+91 Oops! Can\'t share my number publicly.',
   address: 'Ahmedabad, Gujarat, India ',

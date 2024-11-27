@@ -87,6 +87,8 @@ export const skillsImage = (skill) => {
   switch (skillID) {
     case 'gcp':
       return gcp;
+    case 'azure':
+      return azure;
     case 'ubuntu':
       return ubuntu;
     case 'streamlit':

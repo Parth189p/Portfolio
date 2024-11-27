@@ -3,13 +3,13 @@ export const experiences = [
     id: 1,
     title: 'Machine Learning Engineer',
     company: "Cilans System",
-    duration: "(AUg 2023 - Present)"
+    duration: "(MAY 2023 - Present)"
   },
   {
     id: 2,
     title: "Data Science Intern",
-    company: "Cilans System",
-    duration: "(May 2023 - Aug 2023)"
+    company: "",
+    duration: "(NOV 2022 - MAY 2023)"
   },
 //   {
 //     id: 3,

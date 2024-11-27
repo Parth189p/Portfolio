@@ -8,6 +8,8 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import { FaHandPeace } from 'react-icons/fa';
+
 
 function HeroSection() {
   return (
@@ -23,12 +25,16 @@ function HeroSection() {
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
-            Hello, <br />
-            This is {' '}
+          <span style={{ color: '#16f2b3' }}>Hello</span> <FaHandPeace className="inline-block" />, <br />
+          <span style={{ color: '#16f2b3' }}>This is</span> {' '} 
             <span className=" text-pink-500">{personalData.name}</span>
-            {` , I'm a Professional `}
-            <span className=" text-[#16f2b3]">{personalData.designation}</span>
-            .
+            <span style={{ color: '#16f2b3' }}>
+            {`,`}
+            <br />
+            {`I believe in the power of AI to shape a smarter future.`}
+            </span>
+            {/* <span className=" text-[#16f2b3]">{personalData.designation}</span> */}
+            
           </h1>
 
           <div className="my-12 flex items-center gap-5">
@@ -110,7 +116,7 @@ function HeroSection() {
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['Python', 'Machine Learning', 'Deep Learning', 'Natural Language Processing', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy']`}</span>
+                <span className="text-gray-400">{`['Python', 'Machine Learning', 'Deep Learning', 'Natural Language Processing', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy','Azure AI']`}</span>
                 <span className="text-gray-400">{`,`}</span>
               </div>
               <div>

@@ -11,6 +11,8 @@ import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
+import { fetchBlogData } from "@/utils/fetchBlogData";
+import TagManager from "@/components/TagManager";
 
 async function getData() {
   const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@panchalparthppp`)
@@ -26,18 +28,11 @@ async function getData() {
 };
 
 export default async function Home() {
-  useEffect(() => {
-    const tag = createTag();
-    if (tag) {
-      // Only proceed if we got a tag (we're in browser)
-      document.head.appendChild(tag);
-    }
-  }, []);
-
-  const blogs = await getData();
+  const blogs = await fetchBlogData();
 
   return (
     <>
+      <TagManager />
       <HeroSection />
       <AboutSection />
       <Experience />
